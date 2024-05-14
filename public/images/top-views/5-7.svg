@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xl="http://www.w3.org/1999/xlink" xmlns:dc="http://purl.org/dc/elements/1.1/" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="96 2722 308 341" width="308" height="341">
+  <defs/>
+  <g id="Canvas_1" fill="none" stroke="none" stroke-opacity="1" stroke-dasharray="none" fill-opacity="1">
+    <title>Canvas 1</title>
+    <g id="Canvas_1_Layer_1">
+      <title>Layer 1</title>
+      <g id="Graphic_166">
+        <rect x="100" y="2742" width="300" height="300" fill="white"/>
+        <rect x="100" y="2742" width="300" height="300" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="8"/>
+      </g>
+      <g id="Line_165">
+        <line x1="100" y1="2842" x2="400" y2="2842" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="8"/>
+      </g>
+      <g id="Line_164">
+        <line x1="100" y1="2942" x2="400" y2="2942" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="8"/>
+      </g>
+      <g id="Line_163">
+        <line x1="200" y1="2742" x2="200" y2="3042" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="8"/>
+      </g>
+      <g id="Line_162">
+        <line x1="300" y1="2742" x2="300" y2="3042" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="8"/>
+      </g>
+      <g id="Graphic_161">
+        <rect x="210" y="2752" width="80" height="80" fill="#ff4040"/>
+      </g>
+      <g id="Graphic_160">
+        <rect x="210" y="2852" width="80" height="80" fill="#ff4040"/>
+      </g>
+      <g id="Graphic_159">
+        <rect x="110" y="2852" width="80" height="80" fill="#ff4040"/>
+      </g>
+      <g id="Graphic_158">
+        <rect x="310" y="2852" width="80" height="80" fill="#ff4040"/>
+      </g>
+      <g id="Graphic_157">
+        <rect x="210" y="2952" width="80" height="80" fill="#ff4040"/>
+      </g>
+      <g id="Graphic_156">
+        <rect x="105" y="3053" width="90" height="10" fill="#ff4040"/>
+      </g>
+      <g id="Graphic_154">
+        <rect x="305" y="3052" width="90" height="10" fill="#ff4040"/>
+      </g>
+      <g id="Graphic_167">
+        <rect x="305" y="2722" width="90" height="10" fill="#ff4040"/>
+      </g>
+      <g id="Graphic_168">
+        <rect x="105" y="2722" width="90" height="10" fill="#ff4040"/>
+      </g>
+    </g>
+  </g>
+</svg>

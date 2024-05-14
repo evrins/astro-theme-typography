@@ -1,0 +1,14 @@
+---
+const {formula, desc} = Astro.props;
+
+const items : Array<string> = formula.split(',');
+---
+
+<div flex-grow>
+    <div un-flex="~ row gap-1 justify-start">
+      {items.map((item)=>
+        <img class="w-20" src={`/images/moves/${item}.svg`} alt={item}/>
+      )}
+    </div>
+    <p>{desc}</p>
+</div>

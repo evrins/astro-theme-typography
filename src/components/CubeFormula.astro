@@ -1,0 +1,274 @@
+---
+import Ace from '~/components/Ace.astro';
+
+import PhaseList from '~/components/PhaseList.astro';
+import ImageWithCap from "./ImageWithCap.astro";
+import Formula from "./Formula.astro";
+
+const array = [1, 2, 3, 4, 5];
+---
+
+<div>
+    <PhaseList/>
+
+    <h2>第一步: 底棱归位 (又称底部架十字，底层四个棱块正确复原的过程)</h2>
+    <div un-flex="~ row gap-1 justify-around">
+        <ImageWithCap image="/phases/1.svg" caption="图 1"/>
+        <p>
+            魔方底层架十字可以无师自通，只是我们这一步要复原的四个棱块的相对位置顺序要注意，由于我们以白色中心块做底层，按照我们现在的主流魔方的贴纸的帖法（上黄下白，前蓝后緑，左橙右红），如果我们先复原了白蓝这个棱块，那我们在保持白色中心块在底部的情况下，白红的棱块就一点要放在白蓝棱块的右边，白橙棱块放在白蓝棱块的左边，白緑棱块放在白蓝棱块的对面，由于魔方的中心块不会发生变化，所以在复原的过程中，我们是以中心块为参照物的，第一步我们在复原白蓝、白红、白绿、白橙这四个棱块的时候，我们可以先把白色面旋转到顶层，和黄色中心块同一个平面，然后再把他对应的另一个颜色（蓝或红或緑或橙）经过旋转最上层，使之和对应的中心块的颜色同色，这样我们再旋转180度，对应的棱块就正确复原到底部了。
+        </p>
+    </div>
+    <div un-flex="~ row gap-1 justify-around">
+        <ImageWithCap image="/phases/1-1.svg" caption="图 1-1"/>
+        <p>
+            图1-1是没有正确归位的情况，需要调整白蓝和白红两个棱块的位置，才是正确的完成了底棱归位
+        </p>
+    </div>
+
+    <h2>第二步: 底角归位 (复原魔方第一层四个角块)</h2>
+    <div un-flex="~ row gap-1 justify-around">
+        <ImageWithCap image="/phases/2.svg" caption="图 2"/>
+        <p>
+            魔方的四个底角正确归位以后一定会出现倒T字型，如图2所示，如果不是这样肯定是底面角块没有正确归位（位置错了，重新来过）。
+            底角归位也可无师自通，有兴致的朋友可以自己琢磨一些技巧和完成这一步。有难度的朋友可参考我下面介绍的一种技巧来完成，我们先看图2-1和图2-2，首先我们先确定目标块的位置是在他要正确归位的正上面的位置，然后我们再看白色的面朝向何方，就很快的能快速判断出来是下图几种情况中的哪一种了。
+            复原基本思想：先将目标角块调至顶层侧面，再转动能与之相连形成顺色整体的面，使目标角与底棱连成一个(1×1×2)的归位整体，再转至正确的位置。
+            因此，下列的五个实例并没有必要当成公式来死记。
+        </p>
+    </div>
+    <div>
+        <h3>2-1 第一种情况</h3>
+        <div un-flex="~ row justify-around">
+            <ImageWithCap image="/phases/2-1.svg" caption="图 2-1"/>
+            <Formula formula="R,U,R'" desc="公式2-1: (R U R') 记忆技巧：白色朝右，第一步就旋转右层"/>
+        </div>
+    </div>
+    <div>
+        <h3>2-2 第二种情况</h3>
+        <div un-flex="~ row justify-around">
+            <ImageWithCap image="/phases/2-2.svg" caption="图 2-2"/>
+            <Formula formula="F',U',F" desc="公式2-2: (F'U'F) 记忆技巧：白色朝前，第一步就旋转前层"/>
+        </div>
+    </div>
+    <div>
+        <h3>2-3 第三种情况</h3>
+        <div un-flex="~ row justify-around">
+            <ImageWithCap image="/phases/2-3.svg" caption="图 2-3"/>
+            <Formula formula="R,U,R',U',R,U,R'" desc="用两次公式 2-1 (R U R') U' (R U R')"/>
+        </div>
+    </div>
+    <div>
+        <h3>2-4 第四种情况</h3>
+        <div un-flex="~ row justify-around">
+            <ImageWithCap image="/phases/2-4.svg" caption="图 2-4"/>
+            <Formula formula="F',U',F,U,F',U',F" desc="用两次公式 2-2 (F'U'F) U (F'U'F)"/>
+        </div>
+    </div>
+    <div>
+        <h3>2-5 第五种情况</h3>
+        <div un-flex="~ row justify-around">
+            <ImageWithCap image="/phases/2-5.svg" caption="图 2-5"/>
+            <Formula formula="R,U2,R',U',R,U,R'"
+                     desc="用三次公式 2-1 (R U R')(R U R') U' (R U R') = (R U U R') U' (R U R')"/>
+        </div>
+    </div>
+
+    <h2>第三步: 中棱归位 (复原魔方中层四个棱块的步骤)</h2>
+    <div un-flex="~ row gap-1 justify-around">
+        <ImageWithCap image="/phases/3.svg" caption="图 3"/>
+        <p>
+            魔方中间层共有四个棱块，也只是四个棱块需要复原（注意中间层没有角块哟），
+            图3-1和图3-2是两个比较常见的情形，我们主要介绍的就是这两种情况的复原方法，仔细分析比较这两个公式，步骤虽然有点多，可是很好记忆哟。当碰到图301的情形时，
+            你需要的棱色块不在顶面，而在中间层棱块的位置，但颜色反了，碰到这种情况或者类似这种情况，我们就用3-1或者3-2的公式把最上面一层的其他颜色的棱块转移到该位置，我们要的那个蓝红棱块就自然换到顶层了，这稍微有点麻烦，不过这种转换的思想可好好领会一下，在以后的学习过程中会经常用到类似的魔方转换思想
+            。
+        </p>
+    </div>
+    <div>
+        <h3>3-1 第一种情况</h3>
+        <div un-flex="~ row justify-around">
+            <ImageWithCap image="/phases/3-1.svg" caption="图 3-1"/>
+            <Formula formula="U',F',U,F,U,R,U',R'" desc="公式3-1: (U' F' U F) (U R U' R')"/>
+        </div>
+    </div>
+    <div>
+        <h3>3-2 第二种情况</h3>
+        <div un-flex="~ row justify-around">
+            <ImageWithCap image="/phases/3-2.svg" caption="图 3-2"/>
+            <Formula formula="U,R,U',R',U',F',U,F" desc="公式3-2: (U R U' R') (U' F' U F)"/>
+        </div>
+    </div>
+    <div>
+        <h3>3-3 第三种情况</h3>
+        <div un-flex="~ row justify-around">
+            <div un-flex="~ row justify-around">
+                <ImageWithCap image="/phases/3-2.svg" caption="图 3-2"/>
+                <div>
+                    <p>
+                        用一次公式 3-1 + U2 + 再一次公式 3-1 或者 用一次公式 3-2 + U2 + 再一次公式 3-2
+                    </p>
+                    <p>
+                        这种情况，我们是用上面的一个棱块把蓝红棱块先替换出来，然后再用一次公式来解决它
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <h2>第四步: 顶棱面位 (也称顶层架十字，顶层四个棱块的顶面颜色和顶层中心块颜色一样)</h2>
+    <div un-flex="~ row gap-1 justify-around">
+        <ImageWithCap image="/phases/4.svg" caption="图 4"/>
+        <div>
+            <p>
+                魔方底下两层复原以后，我们接着要来复原最上面的顶层了。首先我们要在顶层架一个十字也就是让顶层的四个棱块先面位（先不考虑顺序是否正确），顶层四个棱块面位以后的效果如图4。
+                当顶棱已经面位，请省略这一步。
+            </p>
+            <p>
+                这一步我们只用一个公式就可以完成顶部十字，如果你现在的状况正好是图4-1的情况，你只需要用一个公式4就可完成顶部十字，如果是图4-2的情况，你只需要连续用两次公式即可完成，如果是图4-3的情况，我们用三次公式4即可转成十字。在用公式的过程前，请旋转上层和图4-1或者4-2的情况再开始做公式。提示：在使用公式之前，请注意魔方上层的位置，如图4-1，我们是把已经面位的两个棱块的位置旋转放置在左上和右上位置，如果我们没有这样放置，是放置到前上和后上的位置，我们就用公式4，用过公式后是不能形成十字的。
+            </p>
+        </div>
+    </div>
+    <div>
+        <div un-flex="~ row justify-around">
+            <ImageWithCap image="/phases/4-1.svg" caption="图 4-1 相对顶棱面位"/>
+            <Formula formula="F,R,U,R',U',F'" desc="公式4: F (R U R' U') F'"/>
+        </div>
+    </div>
+    <div>
+        <h3>情况一</h3>
+        <div un-flex="~ row gap-1 justify-start">
+            <ImageWithCap image="/phases/4-2.svg" caption="图 4-2 相邻顶棱面位"/>
+            <p>
+                两遍公式4
+            </p>
+        </div>
+    </div>
+    <div>
+        <h3>情况二</h3>
+        <div un-flex="~ row gap-1 justify-start">
+            <ImageWithCap image="/phases/4-3.svg" caption="图 4-3 无顶棱面位"/>
+            <p>
+                两遍公式4 + U + 公式4
+            </p>
+        </div>
+    </div>
+
+    <h2>第五步: 顶角面位 (魔方的四个顶角的顶面色全部调至顶面的步骤)</h2>
+    <div un-flex="~ row gap-1 justify-around">
+        <ImageWithCap image="/phases/5.svg" caption="图 5"/>
+        <div>
+            <p>
+                当我们完成了顶层十字以后，我们来完成顶角的面位（即顶层角块的翻色），我们还是先观察一下，现在我们的魔方的四个角块是什么状况，如果是已经有一个角的黄色在顶层，其他三个角的顶面颜色不是黄色，我们来对照图5-1和图5-2看是那种情况，我们首先把顶层面是黄色的那个角块移动到前右的位置，再来对照图示，看是图5-1的情况还是图5-2的情况，是那种情况，我们对应用那个公式来完成即可完成顶角面位的步骤，如果不是这两种情况，那一定是下图中的其他5种情况其中的一种情况，按照这5种情况的对应图示放好自己的魔方，然后按照对应的操作步骤来完成。如图503的情况，顶层两个已经面位的角块放置在后面的位置，先用一次公式5-2后，上层旋转180度也即做一下U2就完全是图5-1的情况，再用一次公式5-1即可完成四个角块的面位。
+            </p>
+            <p>
+                其实很多朋友也可以自己琢磨其他方法来实现这5种情况的角块面位步骤，只要我们弄明白了公式5-1和公式5-2是怎么来翻色的，就很轻松的实现其他情况的先转换成一角面位，其他三角要翻色的情况，自己动脑多想想，很简单的。 </p>
+        </div>
+    </div>
+    <div>
+        <h3>5-1 第一种情况</h3>
+        <div un-flex="~ row gap-1 justify-start">
+            <div class="w-16 pt-8">
+                <img src="/images/top-views/5-1.svg"/>
+            </div>
+            <ImageWithCap image="/phases/5-1.svg" caption="图 5-1"/>
+            <Formula formula="R',U2,R,U,R',U,R" desc="公式5-1: R' U2 R U R' U R"/>
+        </div>
+    </div>
+    <div>
+        <h3>5-2 第二种情况</h3>
+        <div un-flex="~ row gap-1 justify-start">
+            <div class="w-16 pt-8">
+                <img src="/images/top-views/5-2.svg"/>
+            </div>
+            <ImageWithCap image="/phases/5-2.svg" caption="图 5-2"/>
+            <Formula formula="U',R,U2,R',U',R,U',R'" desc="公式5-2: U' R U2 R' U' R U' R'"/>
+        </div>
+    </div>
+    <div un-flex="~ row gap-1 justify-between">
+        <div>
+            <ImageWithCap image="/top-views/5-3.svg" caption="图 5-3"/>
+            <p>公式 5-1 + 公式 5-2</p>
+        </div>
+        <div>
+            <ImageWithCap image="/top-views/5-4.svg" caption="图 5-4"/>
+            <p>公式 5-2 + 公式 5-1</p>
+        </div>
+        <div>
+            <ImageWithCap image="/top-views/5-5.svg" caption="图 5-5"/>
+            <p>公式 5-2 + U + 公式 5-1</p>
+        </div>
+        <div>
+            <ImageWithCap image="/top-views/5-6.svg" caption="图 5-6"/>
+            <p>公式 5-1 + U' + 公式 5-1</p>
+        </div>
+        <div>
+            <ImageWithCap image="/top-views/5-7.svg" caption="图 5-7"/>
+            <p>公式 5-1 + 公式 5-1</p>
+        </div>
+    </div>
+
+    <h2>第六步: 顶角归位 (面位的四个顶角的其他两面颜色和对应面的中心块颜色同色) </h2>
+    <div un-flex="~ row gap-1 justify-around">
+        <ImageWithCap image="/phases/6.svg" caption="图 6"/>
+        <div>
+            <p>
+                这一步我们在复原顶层角块的时候，先观察有无两个侧面颜色一样的情况，如图6-1所示，如果有，同色的侧面面向自己的位置，即F面，用公式6即可完成，如果不是这种情况，可随便用一次公式6，就一定会出现有两个角块的侧面颜色一样的情况，我们再用一次公式6即可完成。
+            </p>
+        </div>
+        <ImageWithCap image="/phases/6-1.svg" caption="图 6-1"/>
+    </div>
+    <Formula formula="R,B',R,F2,R',B,R,F2,R2" desc="公式6: R B' R F2 R' B R F2 R2"/>
+
+    <h2> 第七步: 顶棱归位 (已经面位的四个顶棱的另一面的颜色和所在的另四个面的中心块颜色同色)</h2>
+    <div un-flex="~ row gap-1 justify-around">
+        <ImageWithCap image="/phases/7.svg" caption="图 7"/>
+        <p>
+            魔方顶层的四个角块正确归位以后，我们来观察顶层的四个棱块，正常情况下，你手中现在的魔方状态应该是下图四种情况中的一种，如果是图7-1的情况，我们只需要做一次公式7即可完成，如果是其他三种情况，请按照图示对应的操作描述来两次运用公式7来完成顶棱的归位。如图703，我们首先需要把魔方放置的状态和图703的状态一样（即后上层的棱块和左上层的棱块需要互换可完成归位，右上次的棱块和前上层的棱块互换可以完成归位），我们用一次公式7，完成后，我们来做一步U'（即上层逆时针旋转90度）后，我们这个时候的状况就完全是图7-1的情况，这时候，我们再用一次公式7即可完成魔方的全部复原了。
+        </p>
+    </div>
+    <Formula formula="R,U',R,U,R,U,R,U',R',U',R2" desc="公式7: (R U' R) (U R U R) (U' R' U' R2)"/>
+    <div>
+        <h3>7-1 第一种情况</h3>
+        <div un-flex="~ row gap-1 justify-start">
+            <div class="w-16 pt-8">
+                <img src="/images/top-views/7-1.svg"/>
+            </div>
+            <ImageWithCap image="/phases/7-1.svg" caption="图 7-1"/>
+            <p>
+                公式 7
+            </p>
+        </div>
+    </div>
+    <div>
+        <h3>7-2 第二种情况</h3>
+        <div un-flex="~ row gap-1 justify-start">
+            <div class="w-16 pt-8">
+                <img src="/images/top-views/7-2.svg"/>
+            </div>
+            <p>
+                公式 7 两次
+            </p>
+        </div>
+    </div>
+    <div>
+        <h3>7-3 第三种情况</h3>
+        <div un-flex="~ row gap-1 justify-start">
+            <div class="w-16 pt-8">
+                <img src="/images/top-views/7-3.svg"/>
+            </div>
+            <p>
+                公式 7 + U + 公式 7
+            </p>
+        </div>
+    </div>
+    <div>
+        <h3>7-4 第四种情况</h3>
+        <div un-flex="~ row gap-1 justify-start">
+            <div class="w-16 pt-8">
+                <img src="/images/top-views/7-4.svg"/>
+            </div>
+            <p>
+                公式 7 + U' + 公式 7
+            </p>
+        </div>
+    </div>
+
+</div>

@@ -1,0 +1,10 @@
+---
+const {image, caption} = Astro.props
+---
+
+<div class="w-24 flex-shrink-0">
+    <div class="w-24 h-28">
+        <img src={`/images${image}`}/>
+    </div>
+    <p class="text-center! text-4">{caption}</p>
+</div>

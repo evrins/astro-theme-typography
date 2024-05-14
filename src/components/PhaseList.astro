@@ -1,0 +1,43 @@
+---
+import {type Step} from "../entities";
+import ImageWithCap from "./ImageWithCap.astro";
+
+const steps: Step[] = [
+  {
+    name: '底棱归位',
+    image: '/phases/p1.svg',
+  },
+  {
+    name: '底角归位',
+    image: '/phases/p2.svg',
+  },
+  {
+    name: '中棱归位',
+    image: '/phases/p3.svg',
+  },
+  {
+    name: '顶棱位面',
+    image: '/phases/p4.svg',
+  },
+  {
+    name: '顶角位面',
+    image: '/phases/p5.svg',
+  },
+  {
+    name: '顶角归位',
+    image: '/phases/p6.svg',
+  },
+  {
+    name: '顶棱归位',
+    image: '/phases/p7.svg',
+  },
+]
+---
+<h2>层先法复原的基本步骤示意图: </h2>
+<div un-flex="~ row gap-1 justify-around" class="my">
+  {
+    steps.map((item, index) => (
+            <ImageWithCap image={item.image} caption={item.name} />
+    ))
+  }
+</div>
